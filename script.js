@@ -1,1 +1,1 @@
-console.log("Welcome to My Website!");
+console.log("Calligraphy website by [Your Name]!");
