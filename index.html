@@ -84,7 +84,7 @@
 						Thank you for considering ScribbledbyAnju. Let me help bring your vision to life with the timeless beauty of calligraphy and engraving.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfr1EMBLfm1qk6BWaqC254QQczNR4D5ZvuTJf0KKyEtKwNKmg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+								<form id="customForm">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" /></div>
@@ -95,10 +95,35 @@
 										<li><input type="submit" value="Send Message" /></li>
 									</ul>
 								</form>
-								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Thank you for your message!'); submitted=false; }"></iframe>
+								<div id="toast" style="visibility: hidden; position: fixed; bottom: 0; right: 0; margin: 20px; padding: 15px; background: #333; color: #fff; border-radius: 5px;">
+									Thank you for your submission!
+								</div>
 								<script>
-									var submitted = false;
-								</script>
+									function showToast() {
+										const toast = document.getElementById('toast');
+										toast.style.visibility = 'visible';
+										setTimeout(() => {
+										toast.style.visibility = 'hidden';
+										}, 3000); // Hide after 3 seconds
+									}
+
+									document.getElementById('customForm').addEventListener('submit', function(event) {
+									  event.preventDefault();
+									  const form = event.target;
+									  const formData = new FormData(form);
+								  
+									  fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfr1EMBLfm1qk6BWaqC254QQczNR4D5ZvuTJf0KKyEtKwNKmg/formResponse', {
+										method: 'POST',
+										body: formData,
+										mode: 'no-cors'
+									  }).then(() => {
+										showToast();
+										form.reset();
+									  }).catch(error => {
+										console.error('Error submitting the form:', error);
+									  });
+									});
+								  </script>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
