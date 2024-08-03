@@ -84,16 +84,21 @@
 						Thank you for considering ScribbledbyAnju. Let me help bring your vision to life with the timeless beauty of calligraphy and engraving.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
+								<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfr1EMBLfm1qk6BWaqC254QQczNR4D5ZvuTJf0KKyEtKwNKmg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
 									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="entry.1050809680" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
+									</br>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Thank you for your message!'); submitted=false; }"></iframe>
+								<script>
+									var submitted = false;
+								</script>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
