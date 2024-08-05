@@ -88,17 +88,19 @@
 						Thank you for considering ScribbledbyAnju. Let me help bring your vision to life with the timeless beauty of calligraphy and engraving.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
+								<!-- TODO: required and some validation is pending -->
 								<form id="customForm">
 									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="entry.1050809680" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" required/></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" required/></div>
+										<div class="col-12"><textarea name="entry.1050809680" id="message" placeholder="Message" rows="4" required></textarea></div>
 									</div>
 									</br>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" /></li>
 									</ul>
 								</form>
+								<!-- TODO: should be in center and css to be checked -->
 								<div id="toast" style="visibility: hidden; position: fixed; bottom: 0; right: 0; margin: 20px; padding: 15px; background: #333; color: #fff; border-radius: 5px;">
 									Thank you for your submission!
 								</div>
@@ -106,6 +108,7 @@
 									function showToast() {
 										const toast = document.getElementById('toast');
 										toast.style.visibility = 'visible';
+										toast.style.opacity = 1;
 										setTimeout(() => {
 										toast.style.visibility = 'hidden';
 										}, 3000); // Hide after 3 seconds
