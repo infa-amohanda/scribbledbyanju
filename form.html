@@ -1,71 +1,88 @@
-<section id="three">
-    <h2>Get In Touch</h2>
-    <p>Whether you are looking to commission a custom piece or learn more about the art of calligraphy and engraving, I invite you to explore my portfolio and services. Please feel free to contact me with any inquiries or to discuss your specific needs.
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ScribbledbyAnju</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTMQ3STR8K"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-    Thank you for considering ScribbledbyAnju. Let me help bring your vision to life with the timeless beauty of calligraphy and engraving.</p>
-    <div class="row">
-        <div class="col-8 col-12-small">
-            <!-- TODO: required and some validation is pending -->
-            <form id="customForm">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" required/></div>
-                    <div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" required/></div>
-                    <div class="col-12"><textarea name="entry.1050809680" id="message" placeholder="Message" rows="4" required></textarea></div>
-                </div>
-                </br>
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message" /></li>
-                </ul>
-            </form>
-            <!-- TODO: should be in center and css to be checked -->
-            <div id="toast" style="visibility: hidden; position: fixed; bottom: 0; right: 0; margin: 20px; padding: 15px; background: #333; color: #fff; border-radius: 5px;">
-                Thank you for your submission!
-            </div>
-            <script>
-                function showToast() {
-                    const toast = document.getElementById('toast');
-                    toast.style.visibility = 'visible';
-                    toast.style.opacity = 1;
-                    setTimeout(() => {
-                    toast.style.visibility = 'hidden';
-                    }, 3000); // Hide after 3 seconds
-                }
+	gtag('config', 'G-FTMQ3STR8K');
+	</script>
+	<body class="is-preload">
 
-                document.getElementById('customForm').addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  const form = event.target;
-                  const formData = new FormData(form);
-              
-                  fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfr1EMBLfm1qk6BWaqC254QQczNR4D5ZvuTJf0KKyEtKwNKmg/formResponse', {
-                    method: 'POST',
-                    body: formData,
-                    mode: 'no-cors'
-                  }).then(() => {
-                    showToast();
-                    form.reset();
-                  }).catch(error => {
-                    console.error('Error submitting the form:', error);
-                  });
-                });
-              </script>
-        </div>
-        <div class="col-4 col-12-small">
-            <ul class="labeled-icons">
-                <li>
-                    <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                    43 Newcastle Manor Square<br />
-                    Newcastle, Dublin<br />
-                    Ireland
-                </li>
-                <li>
-                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                    +353 892171814
-                </li>
-                <li>
-                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                    <a href="mailto:letteredbyanju@gmail.com">letteredbyanju@gmail.com</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+		<!-- Main -->
+			<div id="main">
+
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Whether you are looking to commission a custom piece or learn more about the art of calligraphy and engraving, I invite you to explore my portfolio and services. Please feel free to contact me with any inquiries or to discuss your specific needs.
+
+						Thank you for considering ScribbledbyAnju. Let me help bring your vision to life with the timeless beauty of calligraphy and engraving.</p>
+						<div class="row">
+							<div class="col-12">
+								<!-- TODO: required and some validation is pending -->
+								<form id="customForm">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="entry.1941658042" id="name" placeholder="Name" required/></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="entry.851283585" id="email" placeholder="Email" required/></div>
+										<div class="col-12"><textarea name="entry.1050809680" id="message" placeholder="Message" rows="4" required></textarea></div>
+									</div>
+									</br>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
+								</form>
+								<!-- TODO: should be in center and css to be checked -->
+								<div id="toast" style="visibility: hidden; position: fixed; bottom: 0; right: 0; margin: 20px; padding: 15px; background: #333; color: #fff; border-radius: 5px;">
+									Thank you for your submission!
+								</div>
+								<script>
+									function showToast() {
+										const toast = document.getElementById('toast');
+										toast.style.visibility = 'visible';
+										toast.style.opacity = 1;
+										setTimeout(() => {
+										toast.style.visibility = 'hidden';
+										}, 3000); // Hide after 3 seconds
+									}
+
+									document.getElementById('customForm').addEventListener('submit', function(event) {
+									  event.preventDefault();
+									  const form = event.target;
+									  const formData = new FormData(form);
+								  
+									  fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfr1EMBLfm1qk6BWaqC254QQczNR4D5ZvuTJf0KKyEtKwNKmg/formResponse', {
+										method: 'POST',
+										body: formData,
+										mode: 'no-cors'
+									  }).then(() => {
+										showToast();
+										form.reset();
+									  }).catch(error => {
+										console.error('Error submitting the form:', error);
+									  });
+									});
+								  </script>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
